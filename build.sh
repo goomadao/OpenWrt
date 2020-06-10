@@ -33,7 +33,7 @@ done
 initialize() {
     git submodule init
     git submodule update
-    mkdir env
+    mkdir -p env
 }
 
 clean() {
@@ -45,8 +45,14 @@ update() {
     ./scripts/feeds install -a
 }
 
+hack_vermagic() {
+    sed -i '/.vermagic/ s/^/#/' include/kernel-defaults.mk
+    sed -i '/.vermagic/ s/$/\n\tcp $(TOPDIR)\/vermagic.default\ \$(LINUX_DIR)\/.vermagic/' include/kernel-defaults.mk
+}
+
 if [[ $SHOULD_INITIALIZE == 1 ]]; then
     initialize
+    hack_vermagic
     update
 fi
 
