@@ -17,6 +17,7 @@
 /package/feeds
 /package/openwrt-packages
 /package/goomadao
+/package/lean
 /*.patch
 key-build*
 *.orig
