@@ -1,3 +1,9 @@
 [submodule "package/devries/luci-theme-argon"]
 	path = package/devries/luci-theme-argon
 	url = https://github.com/jerrykuku/luci-theme-argon.git
+[submodule "package/goomadao/luci-app-ipv6_ddns"]
+	path = package/goomadao/luci-app-ipv6_ddns
+	url = https://github.com/goomadao/luci-app-ipv6_ddns
+[submodule "package/goomadao/luci-app-serverstatus"]
+	path = package/goomadao/luci-app-serverstatus
+	url = https://github.com/goomadao/luci-app-serverstatus
